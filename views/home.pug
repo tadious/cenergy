@@ -1,27 +1,775 @@
 extends layout
 
 block content
-  h1 Hackathon Starter
-  p.lead A boilerplate for Node.js web applications.
-  hr
-  .row
-    .col-md-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
-    .col-md-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
-    .col-md-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
-    .col-md-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
+  section#home.no-padding.parallax.mobile-height.wow.fadeIn(data-stellar-background-ratio='0.5' style="background-image:url('http://placehold.it/1920x1200');")
+    .opacity-extra-medium.bg-extra-dark-gray
+    .container.position-relative.full-screen
+      .slider-typography.text-center
+        .slider-text-middle-main.xs-padding-15px-lr
+          .slider-text-middle
+            img(src='images/text.png' alt='')
+            .down-section.text-center
+              a.inner-link(href='#about')
+                i.ti-arrow-down.icon-extra-small.text-white.bg-deep-pink.padding-15px-all.xs-padding-10px-all.border-radius-100
+  // end hero section
+  // start feature box section
+  section#about.wow.fadeIn
+    .container
+      .row
+        // start feature box item
+        .col-lg-8.col-md-8.col-sm-10.col-xs-12.text-center.center-col.margin-eight-bottom.xs-margin-30px-bottom
+          span.alt-font.text-deep-pink.text-medium.margin-5px-bottom.display-block We are delivering beautiful digital products
+          h5.font-weight-300.text-extra-dark-gray
+            | We provide high quality and cost effective offshore web and software development services
+        // end feature box item
+      .row
+        // start feature box item
+        .col-md-4.col-sm-4.col-xs-12.xs-margin-30px-bottom.xs-text-center.wow.fadeInUp.last-paragraph-no-margin
+          .col-md-3.col-sm-4.col-xs-12.no-padding-left.pull-left.xs-no-padding-right
+            i.icon-lightbulb.icon-extra-medium.text-medium-gray.xs-margin-10px-bottom.position-relative.top-minus3
+            span.separator-line-verticle-large.margin-ten-right.bg-deep-pink.vertical-align-top.pull-right.margin-two-top.hidden-xs
+          .col-md-9.col-sm-8.col-xs-12.sm-no-padding-lr
+            span.text-medium.margin-four-bottom.text-extra-dark-gray.alt-font.display-block.sm-margin-10px-bottom.xs-margin-5px-bottom Digital Branding
+            p.width-90.md-width-100
+              | We can help you find the precise message to clearly speak to who you are as a company.
+        // end feature box item
+        // start feature box item
+        .col-md-4.col-sm-4.col-xs-12.xs-margin-30px-bottom.xs-text-center.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.2s')
+          .col-md-3.col-sm-4.col-xs-12.no-padding-left.pull-left.xs-no-padding-right
+            i.icon-globe.icon-extra-medium.text-medium-gray.xs-margin-10px-bottom.position-relative.top-minus3
+            span.separator-line-verticle-large.margin-ten-right.bg-deep-pink.vertical-align-top.pull-right.margin-two-top.hidden-xs
+          .col-md-9.col-sm-8.col-xs-12.sm-no-padding-lr
+            h5.text-medium.margin-four-bottom.text-extra-dark-gray.alt-font.display-block.sm-margin-10px-bottom.xs-margin-5px-bottom Web Interactive
+            p.width-90.md-width-100 Our websites look great, but each page has a clearly defined conversion goal.
+        // end feature box item
+        // start feature box item
+        .col-md-4.col-sm-4.col-xs-12.xs-text-center.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.4s')
+          .col-md-3.col-sm-4.col-xs-12.no-padding-left.pull-left.xs-no-padding-right
+            i.icon-paintbrush.icon-extra-medium.text-medium-gray.xs-margin-10px-bottom.position-relative.top-minus3
+            span.separator-line-verticle-large.margin-ten-right.bg-deep-pink.vertical-align-top.pull-right.margin-two-top.hidden-xs
+          .col-md-9.col-sm-8.col-xs-12.sm-no-padding-lr
+            h5.text-medium.margin-four-bottom.text-extra-dark-gray.alt-font.display-block.sm-margin-10px-bottom.xs-margin-5px-bottom Graphic Design
+            p.width-90.md-width-100
+              | We interlace our creative with solid marketing and branding principles. A strong brand.
+        // end feature box item
+  // end feature box section
+  // start parallax section
+  section.parallax.wow.fadeIn(data-stellar-background-ratio='0.3' style="background-image:url('http://placehold.it/1920x1200');")
+    .opacity-extra-medium.bg-black
+    .container.position-relative
+      .row
+        .col-lg-6.col-md-6.col-sm-10.col-xs-12.text-center.center-col.last-paragraph-no-margin
+          a.popup-youtube(href='https://www.youtube.com/watch?v=nrJtHemSPW4')
+            img.width-130px(src='images/icon-play.png' alt='')
+          h4.alt-font.text-white.margin-15px-bottom.xs-margin-20px-bottom Unique. Powerful. Creative.
+          p.text-extra-large.font-weight-300.text-light-gray.width-85.xs-width-100.display-inline-block.margin-25px-bottom
+            | We provide high quality and cost effective offshore web and software development services.
+  // end parallax section
+  // start services section
+  section#services.bg-light-gray.wow.fadeIn
+    .container
+      .row
+        .col-lg-6.col-md-6.col-sm-8.col-xs-12.center-col.margin-eight-bottom.sm-margin-40px-bottom.xs-margin-30px-bottom.text-center.last-paragraph-no-margin
+          h5.alt-font.font-weight-700.text-extra-dark-gray.text-uppercase.margin-15px-bottom Our Services
+          p.no-margin-bottom
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry&apos;s standard dummy text since.
+      .row.equalize.xs-equalize-auto
+        // start Services item
+        .col-md-3.col-sm-6.col-xs-12.sm-margin-30px-bottom.wow.fadeInUp.last-paragraph-no-margin
+          .bg-white.box-shadow-light.text-center.padding-eighteen-tb.feature-box-8.position-relative.z-index-5.height-100.xs-padding-15px-lr
+            .display-inline-block.margin-20px-bottom.xs-margin-10px-bottom
+              i.icon-desktop.text-white.icon-round-small.bg-deep-pink
+            .alt-font.text-extra-dark-gray.font-weight-600.margin-10px-bottom Sales Promotion
+            p.width-75.md-width-90.xs-width-100.center-col
+              | Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.
+            .feature-box-overlay.bg-deep-pink
+        // end Services item
+        // start Services item
+        .col-md-3.col-sm-6.col-xs-12.sm-margin-30px-bottom.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.2s')
+          .bg-white.box-shadow-light.text-center.padding-eighteen-tb.feature-box-8.position-relative.z-index-5.height-100.xs-padding-15px-lr
+            .display-inline-block.margin-20px-bottom.xs-margin-10px-bottom
+              i.icon-tools.text-white.icon-round-small.bg-deep-pink
+            .alt-font.text-extra-dark-gray.font-weight-600.margin-10px-bottom SEO Marketing
+            p.width-75.md-width-90.xs-width-100.center-col
+              | Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.
+            .feature-box-overlay.bg-deep-pink
+        // end Services item
+        // start Services item
+        .col-md-3.col-sm-6.col-xs-12.xs-margin-30px-bottom.wow.fadeInUp.last-paragraph-no-margin.xs-padding-15px-lr(data-wow-delay='0.4s')
+          .bg-white.box-shadow-light.text-center.padding-eighteen-tb.feature-box-8.position-relative.z-index-5.height-100
+            .display-inline-block.margin-20px-bottom.xs-margin-10px-bottom
+              i.icon-scissors.text-white.icon-round-small.bg-deep-pink
+            .alt-font.text-extra-dark-gray.font-weight-600.margin-10px-bottom Strategic Planning
+            p.width-75.md-width-90.xs-width-100.center-col
+              | Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.
+            .feature-box-overlay.bg-deep-pink
+        // end Services item
+        // start Services item
+        .col-md-3.col-sm-6.col-xs-12.wow.fadeInUp.last-paragraph-no-margin.xs-padding-15px-lr(data-wow-delay='0.6s')
+          .bg-white.box-shadow-light.text-center.padding-eighteen-tb.feature-box-8.position-relative.z-index-5.height-100
+            .display-inline-block.margin-20px-bottom.xs-margin-10px-bottom
+              i.icon-laptop.text-white.icon-round-small.bg-deep-pink
+            .alt-font.text-extra-dark-gray.font-weight-600.margin-10px-bottom Product Branding 
+            p.width-75.md-width-90.xs-width-100.center-col
+              | Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.
+            .feature-box-overlay.bg-deep-pink
+        // end Services item
+  // end services section
+  // start counter section
+  section.wow.fadeIn
+    .container
+      .row
+        // start counter item
+        .col-md-3.col-sm-6.col-xs-12.sm-padding-twelve-left.sm-margin-ten-bottom.xs-margin-50px-bottom.xs-padding-15px-left.wow.fadeInRight
+          .feature-box-5.position-relative
+            i.icon-desktop.text-medium-gray.icon-extra-medium.top-6
+            .feature-content
+              h6.display-block.text-extra-dark-gray.font-weight-600.alt-font.no-margin-bottom.xs-margin-5px-bottom.timer(data-speed='2000' data-to='350') 350
+              span.text-small.text-uppercase.position-relative.top-minus4 Happy Clients
+        // end counter item
+        // start counter item
+        .col-md-3.col-sm-6.col-xs-12.sm-padding-twelve-left.sm-margin-ten-bottom.xs-margin-50px-bottom.xs-padding-15px-left.wow.fadeInRight(data-wow-delay='0.2s')
+          .feature-box-5.position-relative
+            i.icon-camera.text-medium-gray.icon-extra-medium.top-6
+            .feature-content
+              h6.display-block.text-extra-dark-gray.font-weight-600.alt-font.no-margin-bottom.xs-margin-5px-bottom.timer(data-speed='2000' data-to='780') 780
+              span.text-small.text-uppercase.position-relative.top-minus4 Photo Capture
+        // end counter item
+        // start counter item
+        .col-md-3.col-sm-6.col-xs-12.sm-padding-twelve-left.xs-margin-50px-bottom.xs-padding-15px-left.wow.fadeInRight(data-wow-delay='0.4s')
+          .feature-box-5.position-relative
+            i.icon-laptop.text-medium-gray.icon-extra-medium.top-6
+            .feature-content
+              h6.display-block.text-extra-dark-gray.font-weight-600.alt-font.no-margin-bottom.xs-margin-5px-bottom.timer(data-speed='2000' data-to='850') 850
+              span.text-small.text-uppercase.position-relative.top-minus4 Work Completed
+        // end counter item
+        // start counter item
+        .col-md-3.col-sm-6.col-xs-12.sm-padding-twelve-left.xs-padding-15px-left.wow.fadeInRight(data-wow-delay='0.6s')
+          .feature-box-5.position-relative
+            i.icon-chat.text-medium-gray.icon-extra-medium.top-6
+            .feature-content
+              h6.display-block.text-extra-dark-gray.font-weight-600.alt-font.no-margin-bottom.xs-margin-5px-bottom.timer(data-speed='2000' data-to='650') 650
+              span.text-small.text-uppercase.position-relative.top-minus4 Telephonic Talk
+        // end counter item
+  // end counter section
+  // start accordion section
+  section.bg-light-gray.border-none.no-padding.wow.fadeIn
+    .container-fluid
+      .row.equalize.sm-equalize-auto
+        .col-md-6.col-sm-12.col-xs-12.display-table.wow.fadeInLeft
+          .display-table-cell-vertical-middle.padding-thirteen-all.md-padding-ten-all.sm-padding-six-all.xs-padding-50px-tb.xs-no-padding-lr
+            h5.alt-font.text-extra-dark-gray.sm-text-center.margin-eight-bottom.sm-margin-40px-bottom.xs-margin-30px-bottom.font-weight-600
+              span.font-weight-300.display-block.xs-margin-15px-bottom We&apos;re small but impressive.
+              |  Hand crafted pixel perfect designs.
+            #accordion.panel-group.accordion-style2
+              // start tab content
+              .panel.panel-default
+                .panel-heading
+                  a.accordion-toggle(data-toggle='collapse' data-parent='#accordion' href='#collapseOne')
+                    .panel-title
+                      span.alt-font.font-weight-600.text-deep-pink.tab-tag 01
+                      span.text-extra-dark-gray.xs-width-80.display-inline-block Unique and bold website design
+                      i.fas.fa-angle-up.pull-right.text-extra-dark-gray
+                #collapseOne.panel-collapse.collapse.in
+                  .panel-body
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              // end tab content
+              // start tab content
+              .panel.panel-default
+                .panel-heading
+                  a.accordion-toggle(data-toggle='collapse' data-parent='#accordion' href='#collapseTwo')
+                    .panel-title
+                      span.alt-font.font-weight-600.text-deep-pink.tab-tag 02
+                      span.text-extra-dark-gray.xs-width-80.display-inline-block We&apos;re ready to start now
+                      i.indicator.fas.fa-angle-down.pull-right.text-extra-dark-gray
+                #collapseTwo.panel-collapse.collapse
+                  .panel-body
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              // end tab content
+              // start tab content
+              .panel.panel-default
+                .panel-heading
+                  a.accordion-toggle(data-toggle='collapse' data-parent='#accordion' href='#collapseThree')
+                    .panel-title
+                      span.alt-font.font-weight-600.text-deep-pink.tab-tag 03
+                      span.text-extra-dark-gray.xs-width-80.display-inline-block We Deliver the highest quality
+                      i.indicator.fas.fa-angle-down.pull-right.text-extra-dark-gray
+                #collapseThree.panel-collapse.collapse
+                  .panel-body
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              // end tab content
+        .col-md-6.col-sm-12.col-xs-12.cover-background.sm-height-500px.xs-height-350px.wow.fadeInRight(style="background:url('http://placehold.it/1200x854')")
+  // end accordion section
+  // start masonry portfolio section
+  section#work.no-padding-bottom.wow.fadeIn
+    .container
+      .row
+        .col-lg-6.col-md-6.col-sm-8.col-xs-12.center-col.margin-eight-bottom.text-center.last-paragraph-no-margin.sm-margin-40px-bottom.xs-margin-30px-bottom
+          h5.alt-font.font-weight-700.text-extra-dark-gray.text-uppercase.margin-15px-bottom Recent Portfolio
+          p.no-margin-bottom
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry&apos;s standard dummy text since.
+      .row
+        .col-md-12
+          // start filter navigation
+          ul.portfolio-filter.nav.nav-tabs.border-none.portfolio-filter-tab-1.alt-font.text-uppercase.text-center.text-small.font-weight-600.margin-80px-bottom.sm-margin-40px-bottom.xs-margin-20px-bottom
+            li.nav.active
+              a.xs-display-inline.light-gray-text-link.text-very-small(href='javascript:void(0);' data-filter='*') All
+            li.nav
+              a.xs-display-inline.light-gray-text-link.text-very-small(href='javascript:void(0);' data-filter='.web') Web
+            li.nav
+              a.xs-display-inline.light-gray-text-link.text-very-small(href='javascript:void(0);' data-filter='.advertising') Advertising
+            li.nav
+              a.xs-display-inline.light-gray-text-link.text-very-small(href='javascript:void(0);' data-filter='.branding') Branding
+            li.nav
+              a.xs-display-inline.light-gray-text-link.text-very-small(href='javascript:void(0);' data-filter='.design') Design
+            li.nav
+              a.xs-display-inline.light-gray-text-link.text-very-small(href='javascript:void(0);' data-filter='.photography') Photography
+          // end filter navigation
+    .container-fluid.no-padding
+      .row
+        .filter-content.overflow-hidden.padding-15px-lr
+          ul.portfolio-grid.work-4col.gutter-small.hover-option7
+            li.grid-sizer
+            // start portfolio item
+            li.grid-item.web.branding.design.wow.fadeInUp
+              a(href='single-project-page-03.html')
+                figure
+                  .portfolio-img
+                    img(src='http://placehold.it/800x650' alt='')
+                  figcaption
+                    .portfolio-hover-main.text-center.last-paragraph-no-margin
+                      .portfolio-hover-box.vertical-align-middle
+                        .portfolio-hover-content.position-relative
+                          span.font-weight-600.alt-font.text-uppercase.margin-one-bottom.display-block.text-extra-dark-gray Herbal Beauty Salon
+                          p.text-medium-gray.text-uppercase.text-extra-small Branding and Identity
+            // end portfolio item
+            // start portfolio item
+            li.grid-item.web.branding.design.wow.fadeInUp(data-wow-delay='0.2s')
+              a(href='single-project-page-04.html')
+                figure
+                  .portfolio-img
+                    img(src='http://placehold.it/800x650' alt='')
+                  figcaption
+                    .portfolio-hover-main.text-center.last-paragraph-no-margin
+                      .portfolio-hover-box.vertical-align-middle
+                        .portfolio-hover-content.position-relative
+                          span.font-weight-600.alt-font.text-uppercase.margin-one-bottom.display-block.text-extra-dark-gray Tailoring Interior
+                          p.text-medium-gray.text-uppercase.text-extra-small Branding and Brochure
+            // end portfolio item
+            // start portfolio item
+            li.grid-item.advertising.branding.photography.wow.fadeInUp(data-wow-delay='0.4s')
+              a(href='single-project-page-05.html')
+                figure
+                  .portfolio-img
+                    img(src='http://placehold.it/800x650' alt='')
+                  figcaption
+                    .portfolio-hover-main.text-center.last-paragraph-no-margin
+                      .portfolio-hover-box.vertical-align-middle
+                        .portfolio-hover-content.position-relative
+                          span.font-weight-600.alt-font.text-uppercase.margin-one-bottom.display-block.text-extra-dark-gray Pixflow Studio
+                          p.text-medium-gray.text-uppercase.text-extra-small Branding and Identity
+            // end portfolio item
+            // start portfolio item
+            li.grid-item.web.advertising.design.wow.fadeInUp(data-wow-delay='0.6s')
+              a(href='single-project-page-01.html')
+                figure
+                  .portfolio-img
+                    img(src='http://placehold.it/800x650' alt='')
+                  figcaption
+                    .portfolio-hover-main.text-center.last-paragraph-no-margin
+                      .portfolio-hover-box.vertical-align-middle
+                        .portfolio-hover-content.position-relative
+                          span.font-weight-600.alt-font.text-uppercase.margin-one-bottom.display-block.text-extra-dark-gray Designblast Inc
+                          p.text-medium-gray.text-uppercase.text-extra-small Web and Photography
+            // end portfolio item
+            // start portfolio item
+            li.grid-item.web.branding.design.wow.fadeInUp
+              a(href='single-project-page-02.html')
+                figure
+                  .portfolio-img
+                    img(src='http://placehold.it/800x650' alt='')
+                  figcaption
+                    .portfolio-hover-main.text-center.last-paragraph-no-margin
+                      .portfolio-hover-box.vertical-align-middle
+                        .portfolio-hover-content.position-relative
+                          span.font-weight-600.alt-font.text-uppercase.margin-one-bottom.display-block.text-extra-dark-gray HardDot Stone
+                          p.text-medium-gray.text-uppercase.text-extra-small Branding and Identity
+            // end portfolio item
+            // start portfolio item
+            li.grid-item.web.advertising.branding.design.photography.wow.fadeInUp(data-wow-delay='0.2s')
+              a(href='single-project-page-03.html')
+                figure
+                  .portfolio-img
+                    img(src='http://placehold.it/800x650' alt='')
+                  figcaption
+                    .portfolio-hover-main.text-center.last-paragraph-no-margin
+                      .portfolio-hover-box.vertical-align-middle
+                        .portfolio-hover-content.position-relative
+                          span.font-weight-600.alt-font.text-uppercase.margin-one-bottom.display-block.text-extra-dark-gray Educamp School
+                          p.text-medium-gray.text-uppercase.text-extra-small Branding and Identity
+            // end portfolio item
+            // start portfolio item
+            li.grid-item.web.advertising.branding.design.photography.wow.fadeInUp(data-wow-delay='0.4s')
+              a(href='single-project-page-04.html')
+                figure
+                  .portfolio-img
+                    img(src='http://placehold.it/800x650' alt='')
+                  figcaption
+                    .portfolio-hover-main.text-center.last-paragraph-no-margin
+                      .portfolio-hover-box.vertical-align-middle
+                        .portfolio-hover-content.position-relative
+                          span.font-weight-600.alt-font.text-uppercase.margin-one-bottom.display-block.text-extra-dark-gray Third Eye Glasses
+                          p.text-medium-gray.text-uppercase.text-extra-small Branding and Brochure
+            // end portfolio item
+            // start portfolio item
+            li.grid-item.web.advertising.branding.design.photography.wow.fadeInUp(data-wow-delay='0.6s')
+              a(href='single-project-page-05.html')
+                figure
+                  .portfolio-img
+                    img(src='http://placehold.it/800x650' alt='')
+                  figcaption
+                    .portfolio-hover-main.text-center.last-paragraph-no-margin
+                      .portfolio-hover-box.vertical-align-middle
+                        .portfolio-hover-content.position-relative
+                          span.font-weight-600.alt-font.text-uppercase.margin-one-bottom.display-block.text-extra-dark-gray Violator Series
+                          p.text-medium-gray.text-uppercase.text-extra-small Web and Photography
+            // end portfolio item
+  // end masonry portfolio section
+  // start progress bar section
+  section.wow.fadeIn
+    .container
+      .row.equalize.sm-equalize-auto
+        .col-lg-6.col-md-6.col-sm-10.sm-center-col.col-xs-12.display-table.wow.fadeIn.last-paragraph-no-margin
+          .display-table-cell.vertical-align-middle.padding-seventeen-right.sm-no-padding-lr.sm-text-center.sm-padding-30px-bottom
+            h6.text-extra-dark-gray.font-weight-600.width-90.alt-font.sm-width-100 We provide high quality and cost effective services.
+            p.width-90.margin-30px-bottom.sm-width-100
+              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry&apos;s standard dummy text since. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        .col-lg-6.col-md-6.col-sm-10.sm-center-col.col-xs-12.display-table.sm-no-margin-bottom.wow.fadeIn
+          .display-table-cell.vertical-align-middle
+            .skillbar-bar-main.skillbar-bar-style1
+              // start  progress bar item
+              .skillbar.margin-45px-bottom(data-percent='92%')
+                span.skill-bar-text.text-extra-small.text-uppercase.text-dark-gray Jquery - 4 years Experience
+                p.skillbar-bar
+                span.skill-bar-percent.text-small
+              // end progress bar item
+              // start  progress bar item
+              .skillbar.margin-45px-bottom(data-percent='97%')
+                span.skill-bar-text.text-extra-small.text-uppercase.text-dark-gray Wordpress - 6 years Experience
+                p.skillbar-bar
+                span.skill-bar-percent.text-small
+              // end progress bar item
+              // start  progress bar item
+              .skillbar.margin-45px-bottom(data-percent='98%')
+                span.skill-bar-text.text-extra-small.text-uppercase.text-dark-gray HTML5 - 5 years Experience
+                p.skillbar-bar
+                span.skill-bar-percent.text-small
+              // end progress bar item
+              // start  progress bar item
+              .skillbar(data-percent='92%')
+                span.skill-bar-text.text-extra-small.text-uppercase.text-dark-gray Photography - 6 years Experience
+                p.skillbar-bar
+                span.skill-bar-percent.text-small
+              // end progress bar item
+  // end progress bar section
+  // start section
+  section.no-padding.wow.fadeIn.bg-extra-dark-gray
+    .container-fluid.no-padding
+      .row.equalize.no-margin
+        .col-md-6.col-sm-12.col-xs-12.position-relative.sm-height-500px.xs-height-350px.cover-background.wow.fadeInLeft(style="background-image: url('http://placehold.it/960x850');")
+          .opacity-extra-medium.bg-extra-dark-gray
+          .bg-deep-pink.width-50.text-center.text-white.padding-ten-all.absolute-middle-center.z-index-5.md-width-70.xs-width-85.xs-padding-twelve-tb.xs-padding-five-lr
+            span.special-char-medium.text-white.absolute-middle-center.top-0.position-absolute.fas.fa-quote-left
+            h6.font-weight-300.no-margin-bottom
+              | We design brand, digital experience &amp; marketing campaigns that engage the right customers.
+        .col-md-6.col-sm-12.col-xs-12.display-table.wow.fadeInRight.last-paragraph-no-margin.sm-text-center
+          .display-table-cell.vertical-align-middle.padding-fifteen-all.md-padding-ten-all.sm-padding-90px-all.xs-text-center.xs-no-padding-lr.xs-padding-40px-tb
+            span.text-medium.margin-10px-bottom.display-block.alt-font We create premium designs and technology
+            h4.alt-font.text-light-gray A digital studio crafting beautiful experiences.
+            p.text-extra-large.width-85.md-width-100
+              | We always stay on the cutting edge of digital, so that our clients maintain their competitive advantage online.
+            p.width-85.md-width-100
+              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text.
+            a.btn.btn-small.margin-35px-top.btn-white(href='home-creative-small-business.html') Start Your Business
+  // end section
+  // start full width feature box section
+  section.no-padding.wow.fadeIn
+    .container-fluid
+      .row.equalize.feature-box-14
+        // start feature box item
+        .col-md-3.col-sm-6.col-xs-12.text-center.display-table.wow.fadeInRight.no-padding.last-paragraph-no-margin
+          .display-table-cell.vertical-align-middle.padding-fifteen-all.sm-padding-50px-all
+            h2.text-light-gray.alt-font.letter-spacing-minus-3.no-margin-bottom 01
+            span.display-block.alt-font.text-medium.text-extra-dark-gray.margin-15px-top.margin-10px-bottom.sm-margin-10px-top.xs-margin-5px-bottom Discussion of the Idea
+            p
+              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard text.
+        // end feature box item
+        // start feature box item
+        .col-md-3.col-sm-6.col-xs-12.text-center.display-table.wow.fadeInRight.no-padding.last-paragraph-no-margin(data-wow-delay='0.2s')
+          .display-table-cell.vertical-align-middle.padding-fifteen-all.sm-padding-50px-all
+            h2.text-light-gray.alt-font.letter-spacing-minus-3.no-margin-bottom 02
+            span.display-block.alt-font.text-medium.text-extra-dark-gray.margin-15px-top.margin-10px-bottom.sm-margin-10px-top.xs-margin-5px-bottom Elaboration of the Core
+            p
+              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard text.
+        // end feature box item
+        // start feature box item
+        .col-md-3.col-sm-6.col-xs-12.text-center.display-table.wow.fadeInRight.no-padding.last-paragraph-no-margin(data-wow-delay='0.4s')
+          .display-table-cell.vertical-align-middle.padding-fifteen-all.sm-padding-50px-all
+            h2.text-light-gray.alt-font.letter-spacing-minus-3.no-margin-bottom 03
+            span.display-block.alt-font.text-medium.text-extra-dark-gray.margin-15px-top.margin-10px-bottom.sm-margin-10px-top.xs-margin-5px-bottom Handcrafted Templates
+            p
+              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard text.
+        // end feature box item
+        // start feature box item
+        .col-md-3.col-sm-6.col-xs-12.text-center.display-table.wow.fadeInRight.no-padding.last-paragraph-no-margin(data-wow-delay='0.6s')
+          .display-table-cell.vertical-align-middle.padding-fifteen-all.sm-padding-50px-all
+            h2.text-light-gray.alt-font.letter-spacing-minus-3.no-margin-bottom 04
+            span.display-block.alt-font.text-medium.text-extra-dark-gray.margin-15px-top.margin-10px-bottom.sm-margin-10px-top.xs-margin-5px-bottom Testing for Perfection
+            p
+              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard text.
+        // end feature box item
+  // end full width feature box section
+  // start parallax section
+  section.parallax.wow.fadeIn(data-stellar-background-ratio='0.6' style="background-image:url('http://placehold.it/1920x1200');")
+    .opacity-medium.bg-extra-dark-gray
+    .container.position-relative.z-index-2
+      .row
+        .col-lg-8.col-md-8.col-sm-10.col-xs-12.text-center.center-col.margin-seven-bottom.xs-margin-40px-bottom
+          h4.alt-font.text-light-gray.width-90.center-col Powerful Website Builder
+          p.text-large.width-85.sm-width-100.font-weight-300.center-col
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since.
+      .row
+        // start feature box item
+        .col-md-3.col-sm-3.col-xs-6.text-center.display-inline-block.feature-box-9.xs-height-200px.wow.zoomIn
+          i.icon-edit.icon-large.margin-20px-bottom.text-deep-pink
+          p.alt-font.text-medium.text-light-gray Creative Elements
+          .text-bottom-line.border-color-deep-pink
+        // end feature box item
+        // start feature box item
+        .col-md-3.col-sm-3.col-xs-6.text-center.display-inline-block.feature-box-9.xs-height-200px.wow.zoomIn(data-wow-delay='0.2s')
+          i.icon-tools-2.icon-large.margin-20px-bottom.text-deep-pink
+          p.alt-font.text-medium.text-light-gray Smart Shortcodes
+          .text-bottom-line.border-color-deep-pink
+        // end feature box item
+        // start feature box item
+        .col-md-3.col-sm-3.col-xs-6.text-center.display-inline-block.feature-box-9.xs-height-200px.wow.zoomIn(data-wow-delay='0.4s')
+          i.icon-expand.icon-large.margin-20px-bottom.text-deep-pink
+          p.alt-font.text-medium.text-light-gray Unlimited Layouts
+          .text-bottom-line.border-color-deep-pink
+        // end feature box item
+        // start feature box item
+        .col-md-3.col-sm-3.col-xs-6.text-center.display-inline-block.feature-box-9.xs-height-200px.wow.zoomIn(data-wow-delay='0.6s')
+          i.icon-scissors.icon-large.margin-20px-bottom.text-deep-pink
+          p.alt-font.text-medium.text-light-gray Shortcode Panel
+          .text-bottom-line.border-color-deep-pink
+        // end feature box item
+  // end parallax section
+  // start team section
+  section#team.wow.fadeIn
+    .container
+      .row
+        .col-lg-6.col-md-6.col-sm-8.col-xs-12.center-col.margin-eight-bottom.text-center.last-paragraph-no-margin.sm-margin-40px-bottom.xs-margin-30px-bottom
+          h5.alt-font.font-weight-700.text-extra-dark-gray.text-uppercase.margin-15px-bottom Creative People
+          p.no-margin-bottom
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry&apos;s standard dummy text since.
+      .row
+        // start team item
+        .col-md-3.col-sm-6.col-xs-12.team-block.text-left.team-style-2.sm-margin-seven-bottom.xs-margin-40px-bottom.wow.slideInUp
+          figure
+            .team-image.xs-width-100
+              img(src='http://placehold.it/700x892' alt='')
+              .team-overlay.bg-deep-pink
+              .team-member-position.text-center.margin-25px-top
+                .text-extra-dark-gray.font-weight-600.text-uppercase.text-small.alt-font Herman Miller
+                .text-extra-small.text-uppercase.text-medium-gray Co-Founder / Design
+            figcaption
+              .overlay-content.text-center.icon-social-small
+                span.text-small.display-inline-block.no-margin
+                  | Lorem Ipsum is simply dummy text of the printing and typesetting industry dummy text.
+                .separator-line-horrizontal-full.bg-deep-pink.margin-eleven-tb.xs-margin-20px-tb
+                a.text-extra-dark-gray(href='http://www.facebook.com' target='_blank')
+                  i.fab.fa-facebook-f
+                a.text-extra-dark-gray(href='http://www.twitter.com' target='_blank')
+                  i.fab.fa-twitter
+                a.text-extra-dark-gray(href='jhttp://plus.google.com' target='_blank')
+                  i.fab.fa-google-plus-g
+                a.text-extra-dark-gray(href='jhttp://www.instagram.com' target='_blank')
+                  i.fab.fa-instagram
+        // end team item
+        // start team item
+        .col-md-3.col-sm-6.col-xs-12.team-block.text-left.team-style-2.sm-margin-seven-bottom.xs-margin-40px-bottom.wow.slideInUp(data-wow-delay='0.2s')
+          figure
+            .team-image.xs-width-100
+              img(src='http://placehold.it/700x892' alt='')
+              .team-overlay.bg-deep-pink
+              .team-member-position.text-center.margin-25px-top
+                .text-extra-dark-gray.font-weight-600.text-uppercase.text-small.alt-font Jeremy Dupont
+                .text-extra-small.text-uppercase.text-medium-gray Creative Director
+            figcaption
+              .overlay-content.text-center.icon-social-small
+                span.text-small.display-inline-block.no-margin
+                  | Lorem Ipsum is simply dummy text of the printing and typesetting industry dummy text.
+                .separator-line-horrizontal-full.bg-deep-pink.margin-eleven-tb.xs-margin-20px-tb
+                a.text-extra-dark-gray(href='http://www.facebook.com' target='_blank')
+                  i.fab.fa-facebook-f
+                a.text-extra-dark-gray(href='http://www.twitter.com' target='_blank')
+                  i.fab.fa-twitter
+                a.text-extra-dark-gray(href='jhttp://plus.google.com' target='_blank')
+                  i.fab.fa-google-plus-g
+                a.text-extra-dark-gray(href='jhttp://www.instagram.com' target='_blank')
+                  i.fab.fa-instagram
+        // end team item
+        // start team item
+        .col-md-3.col-sm-6.col-xs-12.team-block.text-left.team-style-2.sm-margin-seven-bottom.xs-margin-40px-bottom.wow.slideInUp(data-wow-delay='0.4s')
+          figure
+            .team-image.xs-width-100
+              img(src='http://placehold.it/700x892' alt='')
+              .team-overlay.bg-deep-pink
+              .team-member-position.text-center.margin-25px-top
+                .text-extra-dark-gray.font-weight-600.text-uppercase.text-small.alt-font Sara Smith
+                .text-extra-small.text-uppercase.text-medium-gray Creative Studio Head
+            figcaption
+              .overlay-content.text-center.icon-social-small
+                span.text-small.display-inline-block.no-margin
+                  | Lorem Ipsum is simply dummy text of the printing and typesetting industry dummy text.
+                .separator-line-horrizontal-full.bg-deep-pink.margin-eleven-tb.xs-margin-20px-tb
+                a.text-extra-dark-gray(href='http://www.facebook.com' target='_blank')
+                  i.fab.fa-facebook-f
+                a.text-extra-dark-gray(href='http://www.twitter.com' target='_blank')
+                  i.fab.fa-twitter
+                a.text-extra-dark-gray(href='http://plus.google.com' target='_blank')
+                  i.fab.fa-google-plus-g
+                a.text-extra-dark-gray(href='http://www.instagram.com' target='_blank')
+                  i.fab.fa-instagram
+        // end team item
+        // start team item
+        .col-md-3.col-sm-6.col-xs-12.team-block.text-left.team-style-2.wow.slideInUp(data-wow-delay='0.6s')
+          figure
+            .team-image.xs-width-100
+              img(src='http://placehold.it/700x892' alt='')
+              .team-overlay.bg-deep-pink
+              .team-member-position.text-center.margin-25px-top
+                .text-extra-dark-gray.font-weight-600.text-uppercase.text-small.alt-font Bill Gardner
+                .text-extra-small.text-uppercase.text-medium-gray Co-Founder / Design
+            figcaption
+              .overlay-content.text-center.icon-social-small
+                span.text-small.display-inline-block.no-margin
+                  | Lorem Ipsum is simply dummy text of the printing and typesetting industry dummy text.
+                .separator-line-horrizontal-full.bg-deep-pink.margin-eleven-tb.xs-margin-20px-tb
+                a.text-extra-dark-gray(href='http://www.facebook.com' target='_blank')
+                  i.fab.fa-facebook-f
+                a.text-extra-dark-gray(href='http://www.twitter.com' target='_blank')
+                  i.fab.fa-twitter
+                a.text-extra-dark-gray(href='http://plus.google.com' target='_blank')
+                  i.fab.fa-google-plus-g
+                a.text-extra-dark-gray(href='http://www.instagram.com' target='_blank')
+                  i.fab.fa-instagram
+        // end team item
+  // end team section
+  // start blog section
+  section#blog.bg-light-gray.wow.fadeIn
+    .container
+      .row
+        .col-lg-6.col-md-6.col-sm-8.col-xs-12.center-col.margin-eight-bottom.text-center.last-paragraph-no-margin.sm-margin-40px-bottom.xs-margin-30px-bottom
+          h5.alt-font.font-weight-700.text-extra-dark-gray.text-uppercase.margin-15px-bottom Recent Blog
+          p.no-margin-bottom
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry&apos;s standard dummy text since.
+      .row
+        .col-md-12.no-padding.xs-padding-15px-lr
+          ul.blog-grid.blog-3col.gutter-large.blog-post-style5
+            li.grid-sizer
+            // start blog post item
+            li.grid-item.wow.fadeInUp.last-paragraph-no-margin
+              .blog-post.bg-white
+                .blog-post-images.overflow-hidden
+                  a(href='blog-post-layout-01.html')
+                    img(src='http://placehold.it/900x650' alt='')
+                  .blog-categories.bg-white.text-uppercase.text-extra-small.alt-font
+                    a(href='blog-masonry.html') Graphic Design
+                .post-details.inner-match-height.padding-40px-all.sm-padding-20px-all.xs-padding-30px-tb
+                  .blog-hover-color
+                  a.alt-font.post-title.text-medium.text-extra-dark-gray.display-block.md-width-100.margin-5px-bottom(href='blog-post-layout-01.html') I like the body. I like to design everything to do with the body.
+                  .author
+                    span.text-medium-gray.text-uppercase.text-extra-small.display-inline-block
+                      | by 
+                      a.text-medium-gray(href='blog-masonry.html') Jay Benjamin
+                      | &nbsp;&nbsp;|&nbsp;&nbsp;20 April 2017
+                  .separator-line-horrizontal-full.bg-medium-gray.margin-20px-tb
+                  p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy...
+            // end blog post item
+            // start blog post item
+            li.grid-item.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.2s')
+              .blog-post.bg-white
+                .blog-post-images.overflow-hidden
+                  a(href='blog-post-layout-02.html')
+                    img(src='http://placehold.it/900x650' alt='')
+                  .blog-categories.bg-white.text-uppercase.text-extra-small.alt-font
+                    a(href='blog-masonry.html') Graphic Design
+                .post-details.inner-match-height.padding-40px-all.sm-padding-20px-all.xs-padding-30px-tb
+                  .blog-hover-color
+                  a.alt-font.post-title.text-medium.text-extra-dark-gray.display-block.md-width-100.margin-5px-bottom(href='blog-post-layout-02.html') Recognizing the need is the primary condition for design.
+                  .author
+                    span.text-medium-gray.text-uppercase.text-extra-small.display-inline-block
+                      | by 
+                      a.text-medium-gray(href='blog-masonry.html') Jay Benjamin
+                      | &nbsp;&nbsp;|&nbsp;&nbsp;20 April 2017
+                  .separator-line-horrizontal-full.bg-medium-gray.margin-20px-tb
+                  p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy...
+            // end blog post item
+            // start blog post item
+            li.grid-item.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.4s')
+              .blog-post.bg-white
+                .blog-post-images.overflow-hidden
+                  a(href='blog-post-layout-03.html')
+                    img(src='http://placehold.it/900x650' alt='')
+                  .blog-categories.bg-white.text-uppercase.text-extra-small.alt-font
+                    a(href='blog-masonry.html') Web Design
+                .post-details.inner-match-height.padding-40px-all.sm-padding-20px-all.xs-padding-30px-tb
+                  .blog-hover-color
+                  a.alt-font.post-title.text-medium.text-extra-dark-gray.display-block.md-width-100.margin-5px-bottom(href='blog-post-layout-03.html') Styles come and go. Design is a language, not a style.
+                  .author
+                    span.text-medium-gray.text-uppercase.text-extra-small.display-inline-block
+                      | by 
+                      a.text-medium-gray(href='blog-masonry.html') Jay Benjamin
+                      | &nbsp;&nbsp;|&nbsp;&nbsp;20 April 2017
+                  .separator-line-horrizontal-full.bg-medium-gray.margin-20px-tb
+                  p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy...
+            // end blog post item
+  // end blog section
+  // start clients slider section
+  section#clients.parallax.wow.fadeIn(data-stellar-background-ratio='0.4' style="background-image:url('http://placehold.it/1920x1200');")
+    .opacity-medium.bg-extra-dark-gray
+    .container.text-center
+      .row
+        .swiper-slider-clients.swiper-container.white-move
+          .swiper-wrapper
+            // start slider item
+            .swiper-slide.text-center
+              img(src='images/clients-logo1.png' alt='')
+            // end slider item
+            // start slider item
+            .swiper-slide.text-center
+              img(src='images/clients-logo2.png' alt='')
+            // end slider item
+            // start slider item
+            .swiper-slide.text-center
+              img(src='images/clients-logo3.png' alt='')
+            // end slider item
+            // start slider item
+            .swiper-slide.text-center
+              img(src='images/clients-logo4.png' alt='')
+            // end slider item
+            // start slider item
+            .swiper-slide.text-center
+              img(src='images/clients-logo1.png' alt='')
+            // end slider item
+            // start slider item
+            .swiper-slide.text-center
+              img(src='images/clients-logo2.png' alt='')
+            // end slider item
+            // start slider item
+            .swiper-slide.text-center
+              img(src='images/clients-logo3.png' alt='')
+            // end slider item
+            // start slider item
+            .swiper-slide.text-center
+              img(src='images/clients-logo4.png' alt='')
+            // end slider item
+  // end clients slider section
+  // start review section
+  section.wow.fadeIn
+    .container
+      .row
+        .col-lg-6.col-md-6.col-sm-8.col-xs-12.center-col.margin-eight-bottom.text-center.last-paragraph-no-margin.sm-margin-40px-bottom.xs-margin-30px-bottom
+          h5.alt-font.font-weight-700.text-extra-dark-gray.text-uppercase.margin-15px-bottom What People Say
+          p.no-margin-bottom
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry&apos;s standard dummy text since.
+      .row
+        // start testimonial item
+        .col-md-4.col-sm-4.col-xs-12.sm-margin-four-bottom.text-center.xs-margin-30px-bottom.wow.fadeInRight.last-paragraph-no-margin
+          img.border-radius-100.width-30.margin-30px-bottom.xs-margin-15px-bottom.xs-width-100px(src='http://placehold.it/149x149' alt='')
+          p.width-90.center-col.sm-width-90.xs-width-100
+            | Their team are easy to work with and helped me make amazing websites in a short amount of time. Thanks guys for all your hard work.
+          i.fas.fa-quote-left.icon-small.text-deep-pink.display-block.margin-30px-top.margin-15px-bottom.xs-margin-15px-top
+          span.text-extra-dark-gray.font-weight-600.text-small.text-uppercase.display-block.line-height-10.alt-font Shoko Mugikura
+          span.text-light-gray2.text-extra-small.text-uppercase.text-medium-gray Design Manager
+        // end testimonial item
+        // start testimonial item
+        .col-md-4.col-sm-4.col-xs-12.sm-margin-four-bottom.text-center.xs-margin-30px-bottom.wow.fadeInRight.last-paragraph-no-margin(data-wow-delay='0.2s')
+          img.border-radius-100.width-30.margin-30px-bottom.xs-margin-15px-bottom.xs-width-100px(src='http://placehold.it/149x149' alt='')
+          p.width-90.center-col.sm-width-90.xs-width-100
+            | Trust us we looked for a very long time and wasted thousands of dollars testing other teams, freelancers, and outsource companies.
+          i.fas.fa-quote-left.icon-small.text-deep-pink.display-block.margin-30px-top.margin-15px-bottom.xs-margin-15px-top
+          span.text-extra-dark-gray.font-weight-600.text-small.text-uppercase.display-block.line-height-10.alt-font Alexander Smith
+          span.text-light-gray2.text-extra-small.text-uppercase.text-medium-gray Co Founder / CEO
+        // end testimonial item
+        // start testimonial item
+        .col-md-4.col-sm-4.col-xs-12.sm-margin-four-bottom.text-center.wow.fadeInRight.last-paragraph-no-margin.xs-no-margin-bottom(data-wow-delay='0.4s')
+          img.border-radius-100.width-30.margin-30px-bottom.xs-margin-15px-bottom.xs-width-100px(src='http://placehold.it/149x149' alt='')
+          p.width-90.center-col.sm-width-90.xs-width-100
+            | This is an excellent company! I personally enjoyed the energy and the professional support the whole team gave to us into creating website.
+          i.fas.fa-quote-left.icon-small.text-deep-pink.display-block.margin-30px-top.margin-15px-bottom.xs-margin-15px-top
+          span.text-extra-dark-gray.font-weight-600.text-small.text-uppercase.display-block.line-height-10.alt-font Lindsay Swanson
+          span.text-light-gray2.text-extra-small.text-uppercase.text-medium-gray Creative Director
+        // end testimonial item
+  // end review section
+  // start contact section
+  section#contact.wow.fadeIn.no-padding.bg-extra-dark-gray
+    .container-fluid
+      .row.equalize.sm-equalize-auto
+        .col-md-6.col-sm-12.col-xs-12.cover-background.sm-height-550px.xs-height-350px.wow.fadeIn(style='background: url(http://placehold.it/1200x854)')
+        .col-md-6.col-sm-12.col-xs-12.wow.fadeIn
+          .padding-eleven-all.text-center.xs-no-padding-lr
+            .text-medium-gray.alt-font.text-small.text-uppercase.margin-5px-bottom.xs-margin-three-bottom Fill out the form and we&apos;ll be in touch soon!
+            h5.margin-55px-bottom.text-white.alt-font.font-weight-600.text-uppercase.sm-margin-30px-bottom.xs-margin-15px-bottom Ready to request a quote?
+            div
+              form#contact-form(action='javascript:void(0)' method='post')
+                #success-contact-form.no-margin-lr
+                input#name.input-border-bottom(type='text' name='name' placeholder='Name*')
+                input#email.input-border-bottom(type='text' name='email' placeholder='E-mail*')
+                input#subject.input-border-bottom(type='text' name='subject' placeholder='Subject')
+                textarea#comment.input-border-bottom(name='comment' placeholder='Your Message')
+                button#contact-us-button.btn.btn-small.btn-deep-pink.margin-30px-top.sm-margin-10px-top.xs-margin-three-top(type='submit') send message
+  // end contact section
+  // start features section
+  section.wow.fadeIn.border-bottom.border-color-extra-light-gray
+    .container
+      .row.sm-col-2-nth
+        // start features box item
+        .col-md-3.col-sm-6.col-xs-12.text-center.sm-margin-50px-bottom.xs-margin-30px-bottom.wow.fadeInUp.last-paragraph-no-margin
+          i.icon-map-pin.icon-medium.margin-25px-bottom.xs-margin-10px-bottom
+          .text-extra-dark-gray.text-uppercase.text-small.font-weight-600.alt-font.margin-5px-bottom Visit Our Office
+          p.width-70.md-width-85.sm-width-50.xs-width-60.xs-margin-10px-bottom.center-col 401 Broadway, 24th Floor New York, NY 10013.
+          a.margin-15px-top.text-decoration-line-through-deep-pink.display-inline-block.text-uppercase.text-deep-pink.text-small.xs-no-margin-top(href='contact-us-classic-02.html') GET DIRECTION
+        // end features box item
+        // start features box item
+        .col-md-3.col-sm-6.col-xs-12.text-center.sm-margin-50px-bottom.xs-margin-30px-bottom.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.2s')
+          i.icon-chat.icon-medium.margin-25px-bottom.xs-margin-10px-bottom
+          .text-extra-dark-gray.text-uppercase.text-small.font-weight-600.alt-font.margin-5px-bottom Let&apos;s Talk
+          p.width-70.md-width-85.sm-width-50.xs-width-60.xs-margin-10px-bottom.center-col
+            | Phone: 1-800-222-000
+            br
+            | Fax: 1-800-222-002
+          a.margin-15px-top.text-decoration-line-through-deep-pink.display-inline-block.text-uppercase.text-deep-pink.text-small.xs-no-margin-top(href='contact-us-classic.html') call us
+        // end features box item
+        // start features box item
+        .col-md-3.col-sm-6.col-xs-12.text-center.xs-margin-30px-bottom.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.4s')
+          i.icon-envelope.icon-medium.margin-25px-bottom.xs-margin-10px-bottom
+          .text-extra-dark-gray.text-uppercase.text-small.font-weight-600.alt-font.margin-5px-bottom E-mail Us
+          p.width-70.md-width-85.sm-width-50.xs-width-60.xs-margin-10px-bottom.center-col
+            a(href='mailto:info@yourdomain.com') info@yourdomain.com
+            br
+            a(href='mailto:hr@yourdomain.com') hr@yourdomain.com
+          a.margin-15px-top.text-decoration-line-through-deep-pink.display-inline-block.text-uppercase.text-deep-pink.text-small.xs-no-margin-top(href='contact-us-classic-02.html') send e-mail
+        // end features box item
+        // start features box item
+        .col-md-3.col-sm-6.col-xs-12.text-center.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.6s')
+          i.icon-megaphone.icon-medium.margin-25px-bottom.xs-margin-10px-bottom
+          .text-extra-dark-gray.text-uppercase.text-small.font-weight-600.alt-font.margin-5px-bottom Customer Services
+          p.width-70.md-width-85.sm-width-50.xs-width-60.xs-margin-10px-bottom.center-col Lorem Ipsum is simply dummy text of the printing.
+          a.margin-15px-top.text-decoration-line-through-deep-pink.display-inline-block.text-uppercase.text-deep-pink.text-small.xs-no-margin-top(href='contact-us-classic-02.html') open ticket
+        // end features box item
+  // end features section

@@ -1,34 +1,340 @@
 doctype html
-html
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(name='theme-color' content='#4DA5F4')
-    meta(name='csrf-token', content=_csrf)
-    title #{title} - Hackathon Starter
-    link(rel='shortcut icon', href='/favicon.png')
-    link(rel='stylesheet', href='/css/main.css')
-
-  body
-    include partials/header
-
-    .container
-      include partials/flash
-      block content
-
-    include partials/footer
-
-    script(src='/js/lib/jquery.min.js')
-    script(src='/js/lib/bootstrap.min.js')
-    script(src='/js/lib/popper.min.js')
-    script(src='/js/main.js')
-
-    // Google Analytics: change UA-XXXXX-X to be your site's ID
-    script.
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-XXXXX-X', 'auto');
-      ga('send', 'pageview');
+head
+  // title
+  title Cenergy Consulting &ndash; Greater together
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width,initial-scale=1.0,maximum-scale=1')
+  meta(name='author' content='ThemeZaa')
+  // description
+  meta(name='description' content='Cenergy Consulting is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose agency and portfolio HTML5 template with 25 ready home page demos.')
+  // keywords
+  meta(name='keywords' content='creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, masonry, grid, coming soon, faq')
+  // favicon
+  link(rel='shortcut icon' href='images/favicon.ico')
+  link(rel='apple-touch-icon' href='images/apple-touch-icon-57x57.png')
+  link(rel='apple-touch-icon' sizes='72x72' href='images/apple-touch-icon-72x72.png')
+  link(rel='apple-touch-icon' sizes='114x114' href='images/apple-touch-icon-114x114.png')
+  // animation
+  link(rel='stylesheet' href='css/animate.css')
+  // bootstrap
+  link(rel='stylesheet' href='css/bootstrap.min.css')
+  // et line icon
+  link(rel='stylesheet' href='css/et-line-icons.css')
+  // font-awesome icon
+  link(rel='stylesheet' href='css/font-awesome.min.css')
+  // themify icon
+  link(rel='stylesheet' href='css/themify-icons.css')
+  // swiper carousel
+  link(rel='stylesheet' href='css/swiper.min.css')
+  // justified gallery
+  link(rel='stylesheet' href='css/justified-gallery.min.css')
+  // magnific popup
+  link(rel='stylesheet' href='css/magnific-popup.css')
+  // revolution slider
+  link(rel='stylesheet' type='text/css' href='revolution/css/settings.css' media='screen')
+  link(rel='stylesheet' type='text/css' href='revolution/css/layers.css')
+  link(rel='stylesheet' type='text/css' href='revolution/css/navigation.css')
+  // bootsnav
+  link(rel='stylesheet' href='css/bootsnav.css')
+  // style
+  link(rel='stylesheet' href='css/style.css')
+  // responsive css
+  link(rel='stylesheet' href='css/responsive.css')
+  //if IE
+    script(src='js/html5shiv.js')
+// start header
+header
+  // start navigation
+  nav.navbar.navbar-default.bootsnav.navbar-fixed-top.header-light.bg-transparent.nav-box-width.white-link
+    .container.nav-header-container
+      .row
+        // start logo
+        .col-md-2.col-xs-5
+          a.logo(href='#home' title='Cenergy Consulting')
+            img.logo-dark(src='images/logo.png' alt='Cenergy Consulting')
+            img.logo-light(src='images/logo.png' alt='Cenergy Consulting')
+            // img.logo-dark(src='images/logo.png' data-rjs='images/logo@2x.png' alt='Cenergy Consulting')
+            // img.logo-light.default(src='images/logo-white.png' data-rjs='images/logo-white@2x.png' alt='Cenergy Consulting')
+        // end logo
+        .col-md-7.col-xs-2.width-auto.pull-right.accordion-menu
+          button.navbar-toggle.collapsed.pull-right(type='button' data-toggle='collapse' data-target='#navbar-collapse-toggle-1')
+            span.sr-only toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          #navbar-collapse-toggle-1.navbar-collapse.collapse.pull-right
+            ul.nav.navbar-nav.navbar-left.panel-group.no-margin.alt-font.font-weight-800
+              li
+                a.inner-link(href='#home' title='Home') Home
+              li
+                a.inner-link(href='#about' title='About') About
+              li
+                a.inner-link(href='#services' title='Services') Services
+              li
+                a.inner-link(href='#contact' title='Contact') Contact
+  // end navigation
+// end header
+// start hero section
+section#home.no-padding.parallax.mobile-height.wow.fadeIn(data-stellar-background-ratio='0.5' style="/*background-image:url('http://placehold.it/1920x1200');*/")
+  .opacity-extra-medium.bg-extra-dark-gray
+  .container.position-relative.full-screen
+    .slider-typography.text-center
+      .slider-text-middle-main.xs-padding-15px-lr
+        .slider-text-middle
+          img(src='images/text.png' alt='')
+          .down-section.text-center
+            a.inner-link(href='#about')
+              i.ti-arrow-down.icon-extra-small.text-white.bg-deep-pink.padding-15px-all.xs-padding-10px-all.border-radius-100
+// end hero section
+// start feature box section
+section#about.wow.fadeIn
+  .container
+    .row
+      // start feature box item
+      .col-lg-8.col-md-8.col-sm-10.col-xs-12.text-center.center-col.margin-eight-bottom.xs-margin-30px-bottom
+        span.alt-font.text-deep-pink.text-medium.margin-5px-bottom.display-block We are delivering beautiful digital products
+        h5.font-weight-300.text-extra-dark-gray
+          | We provide high quality and cost effective offshore web and software development services
+      // end feature box item
+    .row
+      // start feature box item
+      .col-md-4.col-sm-4.col-xs-12.xs-margin-30px-bottom.xs-text-center.wow.fadeInUp.last-paragraph-no-margin
+        .col-md-3.col-sm-4.col-xs-12.no-padding-left.pull-left.xs-no-padding-right
+          i.icon-lightbulb.icon-extra-medium.text-medium-gray.xs-margin-10px-bottom.position-relative.top-minus3
+          span.separator-line-verticle-large.margin-ten-right.bg-deep-pink.vertical-align-top.pull-right.margin-two-top.hidden-xs
+        .col-md-9.col-sm-8.col-xs-12.sm-no-padding-lr
+          span.text-medium.margin-four-bottom.text-extra-dark-gray.alt-font.display-block.sm-margin-10px-bottom.xs-margin-5px-bottom Digital Branding
+          p.width-90.md-width-100
+            | We can help you find the precise message to clearly speak to who you are as a company.
+      // end feature box item
+      // start feature box item
+      .col-md-4.col-sm-4.col-xs-12.xs-margin-30px-bottom.xs-text-center.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.2s')
+        .col-md-3.col-sm-4.col-xs-12.no-padding-left.pull-left.xs-no-padding-right
+          i.icon-globe.icon-extra-medium.text-medium-gray.xs-margin-10px-bottom.position-relative.top-minus3
+          span.separator-line-verticle-large.margin-ten-right.bg-deep-pink.vertical-align-top.pull-right.margin-two-top.hidden-xs
+        .col-md-9.col-sm-8.col-xs-12.sm-no-padding-lr
+          h5.text-medium.margin-four-bottom.text-extra-dark-gray.alt-font.display-block.sm-margin-10px-bottom.xs-margin-5px-bottom Web Interactive
+          p.width-90.md-width-100 Our websites look great, but each page has a clearly defined conversion goal.
+      // end feature box item
+      // start feature box item
+      .col-md-4.col-sm-4.col-xs-12.xs-text-center.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.4s')
+        .col-md-3.col-sm-4.col-xs-12.no-padding-left.pull-left.xs-no-padding-right
+          i.icon-paintbrush.icon-extra-medium.text-medium-gray.xs-margin-10px-bottom.position-relative.top-minus3
+          span.separator-line-verticle-large.margin-ten-right.bg-deep-pink.vertical-align-top.pull-right.margin-two-top.hidden-xs
+        .col-md-9.col-sm-8.col-xs-12.sm-no-padding-lr
+          h5.text-medium.margin-four-bottom.text-extra-dark-gray.alt-font.display-block.sm-margin-10px-bottom.xs-margin-5px-bottom Graphic Design
+          p.width-90.md-width-100
+            | We interlace our creative with solid marketing and branding principles. A strong brand.
+      // end feature box item
+// end feature box section
+// start parallax section
+section.parallax.wow.fadeIn(data-stellar-background-ratio='0.3' style="background-image:url('http://placehold.it/1920x1200');")
+  .opacity-extra-medium.bg-black
+  .container.position-relative
+    .row
+      .col-lg-6.col-md-6.col-sm-10.col-xs-12.text-center.center-col.last-paragraph-no-margin
+        a.popup-youtube(href='https://www.youtube.com/watch?v=nrJtHemSPW4')
+          img.width-130px(src='images/icon-play.png' alt='')
+        h4.alt-font.text-white.margin-15px-bottom.xs-margin-20px-bottom Unique. Powerful. Creative.
+        p.text-extra-large.font-weight-300.text-light-gray.width-85.xs-width-100.display-inline-block.margin-25px-bottom
+          | We provide high quality and cost effective offshore web and software development services.
+// end parallax section
+// start services section
+section#services.bg-light-gray.wow.fadeIn
+  .container
+    .row
+      .col-lg-6.col-md-6.col-sm-8.col-xs-12.center-col.margin-eight-bottom.sm-margin-40px-bottom.xs-margin-30px-bottom.text-center.last-paragraph-no-margin
+        h5.alt-font.font-weight-700.text-extra-dark-gray.text-uppercase.margin-15px-bottom Our Services
+        p.no-margin-bottom
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry&apos;s standard dummy text since.
+    .row.equalize.xs-equalize-auto
+      // start Services item
+      .col-md-3.col-sm-6.col-xs-12.sm-margin-30px-bottom.wow.fadeInUp.last-paragraph-no-margin
+        .bg-white.box-shadow-light.text-center.padding-eighteen-tb.feature-box-8.position-relative.z-index-5.height-100.xs-padding-15px-lr
+          .display-inline-block.margin-20px-bottom.xs-margin-10px-bottom
+            i.icon-desktop.text-white.icon-round-small.bg-deep-pink
+          .alt-font.text-extra-dark-gray.font-weight-600.margin-10px-bottom Sales Promotion
+          p.width-75.md-width-90.xs-width-100.center-col
+            | Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.
+          .feature-box-overlay.bg-deep-pink
+      // end Services item
+      // start Services item
+      .col-md-3.col-sm-6.col-xs-12.sm-margin-30px-bottom.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.2s')
+        .bg-white.box-shadow-light.text-center.padding-eighteen-tb.feature-box-8.position-relative.z-index-5.height-100.xs-padding-15px-lr
+          .display-inline-block.margin-20px-bottom.xs-margin-10px-bottom
+            i.icon-tools.text-white.icon-round-small.bg-deep-pink
+          .alt-font.text-extra-dark-gray.font-weight-600.margin-10px-bottom SEO Marketing
+          p.width-75.md-width-90.xs-width-100.center-col
+            | Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.
+          .feature-box-overlay.bg-deep-pink
+      // end Services item
+      // start Services item
+      .col-md-3.col-sm-6.col-xs-12.xs-margin-30px-bottom.wow.fadeInUp.last-paragraph-no-margin.xs-padding-15px-lr(data-wow-delay='0.4s')
+        .bg-white.box-shadow-light.text-center.padding-eighteen-tb.feature-box-8.position-relative.z-index-5.height-100
+          .display-inline-block.margin-20px-bottom.xs-margin-10px-bottom
+            i.icon-scissors.text-white.icon-round-small.bg-deep-pink
+          .alt-font.text-extra-dark-gray.font-weight-600.margin-10px-bottom Strategic Planning
+          p.width-75.md-width-90.xs-width-100.center-col
+            | Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.
+          .feature-box-overlay.bg-deep-pink
+      // end Services item
+      // start Services item
+      .col-md-3.col-sm-6.col-xs-12.wow.fadeInUp.last-paragraph-no-margin.xs-padding-15px-lr(data-wow-delay='0.6s')
+        .bg-white.box-shadow-light.text-center.padding-eighteen-tb.feature-box-8.position-relative.z-index-5.height-100
+          .display-inline-block.margin-20px-bottom.xs-margin-10px-bottom
+            i.icon-laptop.text-white.icon-round-small.bg-deep-pink
+          .alt-font.text-extra-dark-gray.font-weight-600.margin-10px-bottom Product Branding 
+          p.width-75.md-width-90.xs-width-100.center-col
+            | Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been standard dummy.
+          .feature-box-overlay.bg-deep-pink
+      // end Services item
+// end services section
+// start contact section
+section#contact.wow.fadeIn.no-padding.bg-extra-dark-gray
+  .container-fluid
+    .row.equalize.sm-equalize-auto
+      .col-md-6.col-sm-12.col-xs-12.cover-background.sm-height-550px.xs-height-350px.wow.fadeIn(style='background: url(http://placehold.it/1200x854)')
+      .col-md-6.col-sm-12.col-xs-12.wow.fadeIn
+        .padding-eleven-all.text-center.xs-no-padding-lr
+          .text-medium-gray.alt-font.text-small.text-uppercase.margin-5px-bottom.xs-margin-three-bottom Fill out the form and we&apos;ll be in touch soon!
+          h5.margin-55px-bottom.text-white.alt-font.font-weight-600.text-uppercase.sm-margin-30px-bottom.xs-margin-15px-bottom Ready to request a quote?
+          div
+            form#contact-form(action='javascript:void(0)' method='post')
+              #success-contact-form.no-margin-lr
+              input#name.input-border-bottom(type='text' name='name' placeholder='Name*')
+              input#email.input-border-bottom(type='text' name='email' placeholder='E-mail*')
+              input#subject.input-border-bottom(type='text' name='subject' placeholder='Subject')
+              textarea#comment.input-border-bottom(name='comment' placeholder='Your Message')
+              button#contact-us-button.btn.btn-small.btn-deep-pink.margin-30px-top.sm-margin-10px-top.xs-margin-three-top(type='submit') send message
+// end contact section
+// start features section
+section.wow.fadeIn.border-bottom.border-color-extra-light-gray
+  .container
+    .row.sm-col-2-nth
+      // start features box item
+      .col-md-3.col-sm-6.col-xs-12.text-center.sm-margin-50px-bottom.xs-margin-30px-bottom.wow.fadeInUp.last-paragraph-no-margin
+        i.icon-map-pin.icon-medium.margin-25px-bottom.xs-margin-10px-bottom
+        .text-extra-dark-gray.text-uppercase.text-small.font-weight-600.alt-font.margin-5px-bottom Visit Our Office
+        p.width-70.md-width-85.sm-width-50.xs-width-60.xs-margin-10px-bottom.center-col 401 Broadway, 24th Floor New York, NY 10013.
+        a.margin-15px-top.text-decoration-line-through-deep-pink.display-inline-block.text-uppercase.text-deep-pink.text-small.xs-no-margin-top(href='contact-us-classic-02.html') GET DIRECTION
+      // end features box item
+      // start features box item
+      .col-md-3.col-sm-6.col-xs-12.text-center.sm-margin-50px-bottom.xs-margin-30px-bottom.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.2s')
+        i.icon-chat.icon-medium.margin-25px-bottom.xs-margin-10px-bottom
+        .text-extra-dark-gray.text-uppercase.text-small.font-weight-600.alt-font.margin-5px-bottom Let&apos;s Talk
+        p.width-70.md-width-85.sm-width-50.xs-width-60.xs-margin-10px-bottom.center-col
+          | Phone: 1-800-222-000
+          br
+          | Fax: 1-800-222-002
+        a.margin-15px-top.text-decoration-line-through-deep-pink.display-inline-block.text-uppercase.text-deep-pink.text-small.xs-no-margin-top(href='contact-us-classic.html') call us
+      // end features box item
+      // start features box item
+      .col-md-3.col-sm-6.col-xs-12.text-center.xs-margin-30px-bottom.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.4s')
+        i.icon-envelope.icon-medium.margin-25px-bottom.xs-margin-10px-bottom
+        .text-extra-dark-gray.text-uppercase.text-small.font-weight-600.alt-font.margin-5px-bottom E-mail Us
+        p.width-70.md-width-85.sm-width-50.xs-width-60.xs-margin-10px-bottom.center-col
+          a(href='mailto:info@yourdomain.com') info@yourdomain.com
+          br
+          a(href='mailto:hr@yourdomain.com') hr@yourdomain.com
+        a.margin-15px-top.text-decoration-line-through-deep-pink.display-inline-block.text-uppercase.text-deep-pink.text-small.xs-no-margin-top(href='contact-us-classic-02.html') send e-mail
+      // end features box item
+      // start features box item
+      .col-md-3.col-sm-6.col-xs-12.text-center.wow.fadeInUp.last-paragraph-no-margin(data-wow-delay='0.6s')
+        i.icon-megaphone.icon-medium.margin-25px-bottom.xs-margin-10px-bottom
+        .text-extra-dark-gray.text-uppercase.text-small.font-weight-600.alt-font.margin-5px-bottom Customer Services
+        p.width-70.md-width-85.sm-width-50.xs-width-60.xs-margin-10px-bottom.center-col Lorem Ipsum is simply dummy text of the printing.
+        a.margin-15px-top.text-decoration-line-through-deep-pink.display-inline-block.text-uppercase.text-deep-pink.text-small.xs-no-margin-top(href='contact-us-classic-02.html') open ticket
+      // end features box item
+// end features section
+// start footer
+footer.footer-strip.padding-50px-tb.xs-padding-30px-tb.bg-light-gray
+  .container
+    .row.equalize.xs-equalize-auto
+      // start logo
+      .col-md-3.col-sm-3.col-xs-12.display-table.sm-text-center.xs-margin-20px-bottom
+        .display-table-cell.vertical-align-middle
+          a(href='index.html')
+            img.footer-logo(src='images/logo.png' alt='Cenergy Consulting')
+      // end logo
+      // start copyright
+      .col-md-6.col-sm-6.col-xs-12.text-center.text-small.alt-font.display-table.xs-margin-10px-bottom.sm-text-center
+        .display-table-cell.vertical-align-middle
+          | &copy; 2018 Cenergy Consulting
+      // end copyright
+      // start social media
+      .col-md-3.col-sm-3.col-xs-12.display-table.text-right.sm-text-center
+        .display-table-cell.vertical-align-middle
+          .social-icon-style-8.display-inline-block.vertical-align-middle
+            ul.small-icon.no-margin-bottom
+              li
+                a.facebook.text-extra-dark-gray(href='https://www.facebook.com/' target='_blank')
+                  i.fab.fa-facebook-f(aria-hidden='true')
+              li
+                a.twitter.text-extra-dark-gray(href='https://twitter.com/' target='_blank')
+                  i.fab.fa-twitter
+              li
+                a.google.text-extra-dark-gray(href='https://plus.google.com' target='_blank')
+                  i.fab.fa-google-plus-g
+              li
+                a.dribbble.text-extra-dark-gray(href='https://dribbble.com/' target='_blank')
+                  i.fab.fa-dribbble.no-margin-right(aria-hidden='true')
+              li
+                a.linkedin.text-extra-dark-gray(href='https://linkedin.com/' target='_blank')
+                  i.fab.fa-linkedin-inno-margin-right(aria-hidden='true')
+      // end social media
+// end footer
+// start scroll to top
+a.scroll-top-arrow(href='javascript:void(0);')
+  i.ti-arrow-up
+// end scroll to top
+// javascript libraries
+script(type='text/javascript' src='js/jquery.js')
+script(type='text/javascript' src='js/modernizr.js')
+script(type='text/javascript' src='js/bootstrap.min.js')
+script(type='text/javascript' src='js/jquery.easing.1.3.js')
+script(type='text/javascript' src='js/smooth-scroll.js')
+script(type='text/javascript' src='js/jquery.appear.js')
+// menu navigation
+script(type='text/javascript' src='js/bootsnav.js')
+script(type='text/javascript' src='js/jquery.nav.js')
+// animation
+script(type='text/javascript' src='js/wow.min.js')
+// page scroll
+script(type='text/javascript' src='js/page-scroll.js')
+// swiper carousel
+script(type='text/javascript' src='js/swiper.min.js')
+// counter
+script(type='text/javascript' src='js/jquery.count-to.js')
+// parallax
+script(type='text/javascript' src='js/jquery.stellar.js')
+// magnific popup
+script(type='text/javascript' src='js/jquery.magnific-popup.min.js')
+// portfolio with shorting tab
+script(type='text/javascript' src='js/isotope.pkgd.min.js')
+// images loaded
+script(type='text/javascript' src='js/imagesloaded.pkgd.min.js')
+// pull menu
+script(type='text/javascript' src='js/classie.js')
+script(type='text/javascript' src='js/hamburger-menu.js')
+// counter
+script(type='text/javascript' src='js/counter.js')
+// fit video
+script(type='text/javascript' src='js/jquery.fitvids.js')
+// equalize
+script(type='text/javascript' src='js/equalize.min.js')
+// skill bars
+script(type='text/javascript' src='js/skill.bars.jquery.js')
+// justified gallery
+script(type='text/javascript' src='js/justified-gallery.min.js')
+// pie chart
+script(type='text/javascript' src='js/jquery.easypiechart.min.js')
+// instagram
+script(type='text/javascript' src='js/instafeed.min.js')
+// retina
+script(type='text/javascript' src='js/retina.min.js')
+// revolution
+script(type='text/javascript' src='revolution/js/jquery.themepunch.tools.min.js')
+script(type='text/javascript' src='revolution/js/jquery.themepunch.revolution.min.js')
+// setting
+script(type='text/javascript' src='js/main.js')
